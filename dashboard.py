@@ -8,7 +8,7 @@ from babel.numbers import format_currency
 sns.set(style='darkgrid')
 
 # URL raw file CSV di GitHub
-GITHUB_CSV_URL = "https://raw.githubusercontent.com/username/repository/main/data/all_data.csv"  # Ganti dengan URL raw file kamu
+GITHUB_CSV_URL = "https://github.com/geraldo2004/Proyek-Analisis-Data-Air-Quality-Dataset/blob/main/all_data.csv"
 
 @st.cache
 def load_data():
