@@ -2,13 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-from babel.numbers import format_currency
 
 # Set style for seaborn
 sns.set(style='darkgrid')
 
 # URL raw file CSV di GitHub
-GITHUB_CSV_URL = "https://github.com/geraldo2004/Proyek-Analisis-Data-Air-Quality-Dataset/blob/main/all_data.csv"
+GITHUB_CSV_URL = "https://raw.githubusercontent.com/geraldo2004/Proyek-Analisis-Data-Air-Quality-Dataset/main/all_data.csv"
 
 @st.cache
 def load_data():
