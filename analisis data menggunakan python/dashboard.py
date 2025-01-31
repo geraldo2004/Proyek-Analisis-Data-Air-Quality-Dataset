@@ -8,7 +8,7 @@ import numpy as np
 sns.set(style='darkgrid')
 
 # Load dataset from GitHub URL
-GITHUB_DATA_URL = "https://raw.githubusercontent.com/username/repository/main/all_data.csv"  # Ganti dengan URL file CSV kamu di GitHub
+GITHUB_DATA_URL = "https://raw.githubusercontent.com/johndoe/air-quality/main/all_data.csv"  # Ganti dengan URL file CSV kamu di GitHub
 
 @st.cache_data  # Ganti @st.cache dengan @st.cache_data sesuai versi Streamlit terbaru
 def load_data():
