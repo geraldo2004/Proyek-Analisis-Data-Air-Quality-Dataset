@@ -1,19 +1,19 @@
-import streamlit as st
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
-import numpy as np
+import seaborn as sns
+import streamlit as st
+from babel.numbers import format_currency
 
 # Set style for seaborn
 sns.set(style='darkgrid')
 
-# Load dataset from local file
-LOCAL_DATA_PATH = "all_data.csv"  # Replace with your local file path
+# URL raw file CSV di GitHub
+GITHUB_CSV_URL = "https://raw.githubusercontent.com/username/repository/main/data/all_data.csv"  # Ganti dengan URL raw file kamu
 
 @st.cache
 def load_data():
-    # Load dataset
-    data = pd.read_csv(LOCAL_DATA_PATH)
+    # Load dataset dari URL raw GitHub
+    data = pd.read_csv(GITHUB_CSV_URL)
     
     # Create a datetime column
     data['date'] = pd.to_datetime(data[['year', 'month', 'day', 'hour']])
