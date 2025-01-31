@@ -7,13 +7,13 @@ import numpy as np
 # Set style for seaborn
 sns.set(style='darkgrid')
 
-# Load dataset from local file
-LOCAL_DATA_PATH = "all_data.csv"  # Replace with your local file path
+# Load dataset from GitHub URL
+GITHUB_DATA_URL = "https://raw.githubusercontent.com/username/repository/main/all_data.csv"  # Ganti dengan URL file CSV kamu di GitHub
 
-@st.cache
+@st.cache_data  # Ganti @st.cache dengan @st.cache_data sesuai versi Streamlit terbaru
 def load_data():
     # Load dataset
-    data = pd.read_csv(LOCAL_DATA_PATH)
+    data = pd.read_csv(GITHUB_DATA_URL)
     
     # Create a datetime column
     data['date'] = pd.to_datetime(data[['year', 'month', 'day', 'hour']])
